@@ -1,8 +1,6 @@
 FROM node:8-alpine
 
-WORKDIR /usr/src/app
-
-COPY . .
+COPY . /usr/src/app/
 
 RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
@@ -11,5 +9,5 @@ RUN apk --no-cache add --virtual native-deps \
   apk del native-deps
   
 RUN npm install
-
+WORKDIR /usr/src/app/
 CMD ["node", "index.js"]
