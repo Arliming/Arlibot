@@ -1,10 +1,10 @@
 FROM node:8-alpine
 
-COPY . /usr/src/app
-
 WORKDIR /usr/src/app
 
-run apk --no-cache add --virtual native-deps \
+COPY . .
+
+RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
   npm install --quiet node-gyp -g &&\
   npm install --quiet && \
