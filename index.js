@@ -641,7 +641,7 @@ ${serveurQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
                 );
                 cow.setColor('#F8E000');
                 cow.setFooter("Made by Arliming");
-                cow.setImage("");
+                cow.setImage("https://cdn.myanimelist.net/images/anime/4/19644.jpg");
                 cow.setThumbnail("https://upload.wikimedia.org/wikipedia/fr/thumb/c/c6/Cowboy_Bebop_Logo.svg/langfr-1024px-Cowboy_Bebop_Logo.svg.png");
             msg.channel.send(cow)
             msg.delete()
@@ -664,6 +664,26 @@ ${serveurQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
                 aot.setImage("https://ekladata.com/kYb5xPC9jZ7vJHiLuU8QHfc4QtU.png");
                 aot.setThumbnail("https://upload.wikimedia.org/wikipedia/fr/thumb/9/94/Attaque_des_Titans_CMJN.svg/langfr-1920px-Attaque_des_Titans_CMJN.svg.png");
             msg.channel.send(aot)
+            msg.delete()
+
+        }   else if(msg.content.includes(prefix+'DrStone')) {
+            var ds = new Discord.RichEmbed()
+                ds.setAuthor(msg.author.tag, msg.author.avatarURL);
+                ds.setTitle("Dr. Stone ドクターストーン")
+                ds.addField("Synopsis :",
+                    `*Taiju, lycéen comme les autres, raconte à son ami, passionné de science, qu’il est sur le point d’annoncer à une fille qu’il est secrètement amoureux d’elle depuis quelques années. Alors que le jeune homme s'apprête a lui déclarer sa flamme, une lumière brillante apparaît dans le ciel et pétrifie toute l'humanité sur Terre. Au fil des années, bien décidé à l'idée d'avouer ses sentiments pour Yuzuriha, la jeune femme qui a conquit son cœur, Taiju parvient à se libérer de cette pétrification et trouve un message gravé dans un arbre. Yuzuriha essaie tant bien que mal de lui faire comprendre que Senku est également sorti de l'emprise de la pierre. Ce dernier est parvenu à maintenir sa conscience vivante en comptant combien de temps il a été pétrifié. Ainsi, Taiju apprend que la date actuelle est le 5 octobre 5738… Ensemble, en équipe, ils chercheront un moyen de libérer les autres humains prisonniers. Ils découvriront un mélange permettant de faire éroder la roche et décident alors de libérer Yuzuriha et Tsukasa.*\n`
+                );
+                ds.addField(
+                    '**Shounen genres : Adventure, Sci-Fi**',
+                    `Dans cet anime, nous suivons l'histoire de Senku, un surdoué et passionné de science, qui se retrouve à l'âge de pierre. Il va donc devoir récréer toutes les inventions humaines à partir de rien…\n`+
+                    `**Date de diffusion :** 05/07/2019\n`+
+                    `**Disponibilité :** Crunchyroll\n`
+                );
+                ds.setColor('#F8E000');
+                ds.setFooter("Made by Arliming");
+                ds.setImage("https://fr.web.img5.acsta.net/pictures/19/08/07/10/33/5476043.jpg");
+                ds.setThumbnail("https://upload.wikimedia.org/wikipedia/fr/thumb/2/2a/Dr._Stone_Logo.png/260px-Dr._Stone_Logo.png");
+            msg.channel.send(ds)
             msg.delete()
 
         }
