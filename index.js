@@ -641,7 +641,7 @@ ${serveurQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
                 );
                 cow.setColor('#F8E000');
                 cow.setFooter("Made by Arliming");
-                cow.setImage("https://cdn.myanimelist.net/images/anime/4/19644.jpg");
+                cow.setImage("");
                 cow.setThumbnail("https://upload.wikimedia.org/wikipedia/fr/thumb/c/c6/Cowboy_Bebop_Logo.svg/langfr-1024px-Cowboy_Bebop_Logo.svg.png");
             msg.channel.send(cow)
             msg.delete()
