@@ -10,4 +10,5 @@ RUN apk --no-cache add --virtual native-deps \
   
 RUN npm install
 WORKDIR /usr/src/app/
+VOLUME /usr/src/app/
 CMD ["node", "index.js"]
