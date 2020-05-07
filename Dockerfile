@@ -4,15 +4,12 @@ COPY . /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN apk --no-cache --virtual build-dependencies add \
-    jpeg-dev \
-    cairo-dev \
-    giflib-dev \
-    pango-dev \
-    python \
-    make \
-    g++
-
+run apk --no-cache add --virtual native-deps \
+  g++ gcc libgcc libstdc++ linux-headers make python && \
+  npm install --quiet node-gyp -g &&\
+  npm install --quiet && \
+  apk del native-deps
+  
 RUN npm install
 
 CMD ["node", "index.js"]
