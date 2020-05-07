@@ -6,4 +6,4 @@ WORKDIR /usr/src/app
 
 RUN npm install
 
-CMD ["node", "src/index.js"]
+CMD ["node", "index.js"]
